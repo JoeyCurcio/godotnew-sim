@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InvItm" load_steps=3 format=3 uid="uid://8ten6ddekgoj"]
+
+[ext_resource type="Script" path="res://Inventory/InventoryItems.gd" id="1_5ygkj"]
+[ext_resource type="Texture2D" uid="uid://cdshsvb5c5tbq" path="res://Assets/itemSprites/stick-icon.png" id="2_27y4f"]
+
+[resource]
+script = ExtResource("1_5ygkj")
+name = "Wood Log"
+texture = ExtResource("2_27y4f")

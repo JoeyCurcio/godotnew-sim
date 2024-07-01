@@ -4,6 +4,8 @@ extends Node2D
 @onready var tile_map : TileMap = $TileMap
 @onready var tool_text = $UILayer/ToolText
 
+@export var inv: Inv
+
 @export var is_debugging: bool = false
 @export var noise_height_text: NoiseTexture2D
 @export var map_seed = 0

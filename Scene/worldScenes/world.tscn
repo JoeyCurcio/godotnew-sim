@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dsaaatljcepuv"]
+[gd_scene load_steps=11 format=3 uid="uid://dsaaatljcepuv"]
 
 [ext_resource type="Script" path="res://Scripts/worldScripts/world.gd" id="1_2yx2u"]
 [ext_resource type="Script" path="res://Scripts/worldScripts/Camera2D.gd" id="1_kyth4"]
 [ext_resource type="Texture2D" uid="uid://k4crfipvucpb" path="res://Assets/tilemapSprites/tilemap1.png" id="2_0w6kn"]
+[ext_resource type="Resource" uid="uid://cja04u3j2wdy6" path="res://Inventory/items/player_inventory.tres" id="2_glcd8"]
+[ext_resource type="PackedScene" uid="uid://dbdb3yery38bw" path="res://Scene/UIScenes/inventory_ui.tscn" id="3_04t17"]
 
 [sub_resource type="Gradient" id="Gradient_v32jd"]
 interpolation_mode = 1
@@ -697,6 +699,7 @@ sources/0 = SubResource("TileSetAtlasSource_p6t0h")
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_2yx2u")
+inv = ExtResource("2_glcd8")
 is_debugging = true
 noise_height_text = SubResource("NoiseTexture2D_c6kqr")
 
@@ -705,6 +708,9 @@ noise_height_text = SubResource("NoiseTexture2D_c6kqr")
 [node name="ToolText" type="Label" parent="UILayer"]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="InventoryUI" parent="UILayer" instance=ExtResource("3_04t17")]
+scale = Vector2(4, 4)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_inl5x")

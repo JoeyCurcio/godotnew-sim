@@ -1,2 +1,12 @@
 res://Scene/worldScenes/world.tscn
+res://Scripts/worldScripts/Inventory.gd
 res://Scripts/worldScripts/world.gd
+res://InventoryItems.gd
+res://Inventory/items/wood_log.tres
+res://Inventory.gd
+res://Inventory/items/player_inventory.tres
+res://Scripts/UIScripts/InventoryUI.gd
+res://Scene/UIScenes/inventory_ui.tscn
+res://Scene/UIScenes/inventory_ui_slot.tscn
+res://Scripts/UIScripts/inventory_ui_slot.gd
+res://default_bus_layout.tres
