@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1719745497
+icon.svg::CompressedTexture2D::7991269902531280651::1719489647::1719490348::1::::<><>::
+::res://Assets/::1719489647
+::res://Assets/environmentSprites/::1719489647
+daynightcycle-gradient-texture.tres::GradientTexture1D::3119443190732880559::1719489647::0::1::::<><>::
+::res://Assets/tilemapSprites/::1719490348
+tilemap1.png::CompressedTexture2D::761907459415542871::1719489647::1719490348::1::::<><>::
+::res://Scene/::1719489647
+::res://Scene/worldScenes/::1719490354
+world.tscn::PackedScene::8422662251912154137::1719490354::0::1::::<><>::res://Scripts/worldScripts/world.gd<>res://Scripts/worldScripts/Camera2D.gd<>uid://k4crfipvucpb::::res://Assets/tilemapSprites/tilemap1.png
+::res://Scripts/::1719489647
+::res://Scripts/globalScripts/::1719489647
+Globals.gd::GDScript::-1::1719489647::0::1::::<>Node<>::
+::res://Scripts/worldScripts/::1719489647
+Camera2D.gd::GDScript::-1::1719489647::0::1::::<>Camera2D<>::
+world.gd::GDScript::-1::1719489647::0::1::::<>Node2D<>::

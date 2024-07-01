@@ -15,7 +15,7 @@ extends Node2D
 @export var growth_speed: float = 5.0
 
 	# Enums for the tool sets
-enum FARMING_MODES {SEEDS, DIRT, HARVEST}
+enum FARMING_MODES {SEEDS, DIRT, HARVEST, LOGGING}
 var farming_mode_state = FARMING_MODES.DIRT
 
 	# Map & Noise variables
@@ -44,6 +44,7 @@ var dirt_tiles = []
 var can_place_plowed_custom_data = "can_place_plow"
 var can_place_seed_custom_data = "can_place_seeds"
 var can_havest_custom_data = "can_havest"
+var can_chop_down = "can_chop_down"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -97,6 +98,9 @@ func _input(event):
 	if Input.is_action_just_pressed("toggleHarvest"):
 		farming_mode_state = FARMING_MODES.HARVEST
 		tool_text.text = "HARVEST"
+	if Input.is_action_just_pressed("toggleLogging"):
+		farming_mode_state = FARMING_MODES.LOGGING
+		tool_text.text = "LOGGING"
 		
 	# Handle the placing of tiles
 	if Input.is_action_just_pressed("leftClick"):
@@ -120,6 +124,9 @@ func _input(event):
 			if retrieving_tilemap_data(tile_mouse_pos, can_havest_custom_data, environment_layer):
 				# NOTE need to implement a check for if the crop is at level trhree
 				tile_map.set_cell(environment_layer, tile_mouse_pos, source_id, clear_atlas)
+		elif farming_mode_state == FARMING_MODES.LOGGING:
+			if retrieving_tilemap_data(tile_mouse_pos, can_chop_down, ground_layer):
+				tile_map.set_cell(ground_layer, tile_mouse_pos, source_id, land_atlas)
 
 # Handle retreiving tilemap data
 func retrieving_tilemap_data(tile_mouse_pos, custom_data_layer, layer):
